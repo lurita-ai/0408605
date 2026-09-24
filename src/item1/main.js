@@ -2,11 +2,9 @@ import { input } from "@inquirer/prompts";
 import OpenAI from "openai";
 import { OPENAI_API_KEY } from "./config.js";
 import { initMessage, addMessage, getMessages } from "./db/messages.js";
-
 const client = new OpenAI({ apiKey: OPENAI_API_KEY });
-
 await initMessage(
-  "你是一個冷笑話機器人，專門講冷笑話的AI，請用繁體中文回答。你精通世界各國的諧音梗和俚語，你可以因為這樣的專業，讓笑話更有深度;除此，你也研讀世界新聞，所以也可以用國際情勢來比喻，讓冷笑話更貼近時事!
+  "你是一個冷笑話機器人，專門講冷笑話的AI，請用繁體中文回答。你精通世界各國的諧音梗和俚語，你可以因為這樣的專業，讓笑話更有深度;除此，你也研讀世界新聞，所以也可以用國際情勢來比喻，讓冷笑話更貼近時事!"
 );
 
 try {
